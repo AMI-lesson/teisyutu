@@ -35,17 +35,6 @@ h1,
     padding: 0 30px;
 }
 
-.title {
-    margin: 0 auto 10px;
-}
-
-.title h2 {
-    font-size: 3rem;
-    border-bottom: 1px solid black;
-    margin: 0 auto;
-    display: inline-block;
-}
-
 /*------------------------------
     ヘッダー
 ------------------------------*/
@@ -79,6 +68,8 @@ h1,
 
 .main_visual {
     display: block;
+    width: 100%;
+    height: 30vh;
 }
 
 .main_title {
@@ -93,15 +84,44 @@ h1,
 }
 
 /*------------------------------
+    works
+------------------------------*/
+.title {
+    margin: 0 auto 10px;
+}
+
+.title h2 {
+    font-size: 3rem;
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+    display: inline-block;
+
+}
+
+.subtitle h3 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/*------------------------------
     レスポンシブ（スマホ対応）
 ------------------------------*/
 @media (max-width: 768px) {
+
+    /*------------------------------
+    HEADER 
+    ------------------------------*/
     .header .container {
         position: relative;
         justify-content: center;
         /* 中央揃え */
     }
 
+    /*hamburger*/
     .hamburger {
         display: flex;
         position: absolute;
@@ -188,9 +208,47 @@ h1,
         margin-bottom: 8px;
     }
 
+    /*------------------------------
+    About（プロフィール）
+------------------------------*/
+    #about {
+        background-color: #E7F2F2;
+    }
 
+    .profile {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 800px;
+        margin: 0 auto;
+    }
 
-    /* works（スマホサイズ） */
+    .profile-img {
+        width: 24%;
+        margin-right: 41px;
+        border-radius: 50%;
+    }
+
+    .profile-img img {
+        border-radius: 50%;
+    }
+
+    .profile-body {
+        flex: 1;
+    }
+
+    .profile-body p {
+        font-size: 31px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+    .profile-body p:last-child {
+        margin-bottom: 0;
+    }
+
+    /*------------------------------
+    WORKS
+    ------------------------------*/
     .works-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -238,41 +296,36 @@ h1,
         margin: 0 10px 10px;
     }
 
-    /*------------------------------
-    About（プロフィール）
-------------------------------*/
-    #about {
-        background-color: #E7F2F2;
+    .more-button-wrapper {
+        text-align: right;
+        margin-top: 40px;
     }
 
-    .profile {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 800px;
-        margin: 0 auto;
+    .more-button {
+        display: inline-block;
+        width: 117px;
+        height: 30px;
+        line-height: 30px;
+        background-color: #e7f2f2;
+        /* Figmaの背景色に合わせた淡いグレー */
+        color: #000;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: normal;
+        border-radius: 20px;
+        transition: background-color 0.3s, color 0.3s;
     }
 
-    .profile-img {
-        width: 24%;
-        margin-right: 41px;
-        border-radius: 50%;
+    .more-button:hover {
+        background-color: #d0e6e6;
+        color: #000;
     }
 
-    .profile-img img {
-        border-radius: 50%;
+    .arrow {
+        margin-left: 5px;
     }
 
-    .profile-body {
-        flex: 1;
-    }
 
-    .profile-body p {
-        font-size: 31px;
-        line-height: 1.8;
-        margin-bottom: 30px;
-    }
 
-    .profile-body p:last-child {
-        margin-bottom: 0;
-    }
 }
