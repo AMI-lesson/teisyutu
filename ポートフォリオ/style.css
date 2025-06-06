@@ -36,11 +36,14 @@ h1,
 }
 
 .title {
+    margin: 0 auto 10px;
+}
+
+.title h2 {
     font-size: 3rem;
     border-bottom: 1px solid black;
-    margin-bottom: 10px;
+    margin: 0 auto;
     display: inline-block;
-    width: auto;
 }
 
 /*------------------------------
@@ -51,7 +54,10 @@ h1,
     top: 0;
     z-index: 1;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.63);
+    position: relative;
+    background-color: rgba(231, 242, 242, 1);
+    /* Figmaの薄いブルー */
+    margin: 0 auto;
 }
 
 .header .container {
@@ -92,6 +98,8 @@ h1,
 @media (max-width: 768px) {
     .header .container {
         position: relative;
+        justify-content: center;
+        /* 中央揃え */
     }
 
     .hamburger {
@@ -117,7 +125,7 @@ h1,
     }
 
     .hamburger.open .bar:nth-child(1) {
-        transform: rotate(45deg) translateY(6px);
+        transform: rotate(45deg) translateY(15px);
     }
 
     .hamburger.open .bar:nth-child(2) {
@@ -125,42 +133,62 @@ h1,
     }
 
     .hamburger.open .bar:nth-child(3) {
-        transform: rotate(-45deg) translateY(-6px);
+        transform: rotate(-45deg) translateY(-15px);
     }
 
-    .gnav {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: #E7F2F2;
-        flex-direction: column;
-        align-items: center;
-        display: none;
-    }
 
     .gnav.open {
         display: flex;
     }
 
-    .gnav-list {
+    /* メニュー全体 */
+    .gnav {
+        display: flex;
         flex-direction: column;
-        gap: 16px;
-        padding: 24px 0;
+        align-items: center;
     }
 
-    .gnav-list a {
-        color: black;
-        list-style: none;
-    }
-
+    /* メニューラベル */
     .menu-label {
-        position: absolute;
-        top: -58px;
-        right: 223px;
-        font-size: 30px;
-        color: black;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
     }
+
+    /* メニューリスト */
+    .gnav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+
+    /* 各メニュー項目 */
+    .gnav-item {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    /* リンク */
+    .gnav-item a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    /* サブメニュー（WORKS配下） */
+    .sub-menu {
+        list-style: disc;
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+
+    .sub-menu li {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+
 
     /* works（スマホサイズ） */
     .works-list {
