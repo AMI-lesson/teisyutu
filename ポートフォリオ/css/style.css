@@ -242,6 +242,11 @@ h1,
         background-color: rgba(0, 0, 0, 0.63);
     }
 
+    .header .container.container-open {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.63) 60px, #E7F2F2 30px) !important;
+    }
+
+
     /*hamburger*/
     .hamburger {
         display: flex;

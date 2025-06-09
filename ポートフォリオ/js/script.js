@@ -4,6 +4,9 @@ $(function () {
     $(this).toggleClass("open");
     $("#gnav").stop().slideToggle();
 
+    // .header の中の .container のみに open をトグル
+    $(".header .container").toggleClass("container-open");
+
     const label = $(this).find(".hamburger-label");
     if ($(this).hasClass("open")) {
       label.text("Close");
