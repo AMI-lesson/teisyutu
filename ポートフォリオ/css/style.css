@@ -82,7 +82,7 @@ h1,
 .main__visual {
     display: block;
     width: 100%;
-    height: 30vh;
+    height: 28vh;
 }
 
 .main__title {
@@ -96,6 +96,8 @@ h1,
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
     white-space: nowrap;
 }
+
+
 
 /*------------------------------
     works
@@ -270,7 +272,7 @@ h1,
     ------------------------------*/
 
 
-.skill.section {
+#skill {
     background-color: #E7F2F2;
     /* 薄いブルー背景 */
 }
@@ -327,6 +329,7 @@ h1,
     .header .container {
         position: relative;
         justify-content: center;
+        background-color: rgba(0, 0, 0, 0.63);
     }
 
     .header .container.container-open {
@@ -557,6 +560,7 @@ h1,
         grid-template-columns: repeat(3, 1fr);
         /* 3列 */
         gap: 20px;
+        margin: 20px;
     }
 
 }
