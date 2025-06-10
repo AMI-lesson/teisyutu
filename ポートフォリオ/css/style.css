@@ -239,7 +239,6 @@ h1,
     .header .container {
         position: relative;
         justify-content: center;
-        background-color: rgba(0, 0, 0, 0.63);
     }
 
     .header .container.container-open {
@@ -320,6 +319,24 @@ h1,
     .gnav__item a {
         text-decoration: none;
         color: #000;
+        display: inline-block;
+        /* 下線の余白調整のために行内ブロックにする */
+        position: relative;
+        padding-bottom: 5px;
+        /* 下線とテキストの間に余白を追加 */
+    }
+
+    .gnav__item a::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        /* 下線の厚さ */
+        background-color: #fff;
+        /* 下線の色 */
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
 
     /* サブメニュー（WORKS配下） */
