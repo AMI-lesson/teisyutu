@@ -57,6 +57,18 @@ h1,
     padding: 20px 40px;
 }
 
+/* ロゴのスタイル */
+.logo {
+    margin-right: auto;
+    max-width: 160px;
+}
+
+.logo img {
+    width: 44%;
+    height: auto;
+    display: block;
+}
+
 /*------------------------------
     メインビジュアル
 ------------------------------*/
@@ -245,6 +257,9 @@ h1,
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.63) 60px, #E7F2F2 30px) !important;
     }
 
+    .logo {
+        display: none;
+    }
 
     /*hamburger*/
     .hamburger {
@@ -457,4 +472,58 @@ h1,
     }
 
 
+}
+
+/*------------------------------
+    レスポンシブ（PC対応）
+------------------------------*/
+@media (min-width: 768px) {
+
+    /* ヘッダー */
+    .header {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.63);
+        color: white;
+    }
+
+    .header .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: right;
+        padding: 15px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .gnav {
+        display: block;
+    }
+
+    .gnav__list {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .gnav__item {
+        margin: 0 15px;
+    }
+
+    .gnav__item a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    .gnav__item a:hover {
+        color: #e7f2f2;
+        /* 薄いブルー */
+    }
+
+    .sub__menu {
+        display: none;
+    }
 }
