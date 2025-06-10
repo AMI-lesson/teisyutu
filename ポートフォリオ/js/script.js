@@ -16,17 +16,24 @@ $(function () {
   });
 
   // works表示制限
-  const visibleCount = 4; // 最初に表示する個数
-  const loadCount = 2; // クリックで追加表示する個数
+  let visibleCount; // 最初に表示する個数
+
+  // 画面幅によって表示数を変更
+  if ($(window).width() <= 768) {
+    // スマホの場合
+    visibleCount = 4;
+  } else {
+    // PCの場合
+    visibleCount = 6;
+  }
 
   $(".works__item").slice(visibleCount).addClass("hidden");
 
+  // 1回のクリックですべて表示
   $(".works__more-button").on("click", function (e) {
     e.preventDefault();
-    $(".works__item.hidden").slice(0, loadCount).removeClass("hidden");
-    if ($(".works__item.hidden").length === 0) {
-      $(this).fadeOut();
-    }
+    $(".works__item.hidden").removeClass("hidden");
+    $(this).fadeOut();
   });
 
   // スクロールしたときにボタンを表示
