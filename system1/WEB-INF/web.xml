@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>sue</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>DBConnectServlet</servlet-name>
+		<servlet-class>java_db_study.DBConnectServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DBConnectServlet</servlet-name>
+		<url-pattern>/DBConnectServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoginChk</servlet-name>
+		<servlet-class>servlet.LoginChk</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginChk</servlet-name>
+		<url-pattern>/LoginChk</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SendIndex</servlet-name>
+		<servlet-class>servlet.SendIndex</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SendIndex</servlet-name>
+		<url-pattern>/SendIndex</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegistAdminUser</servlet-name>
+		<servlet-class>servlet.RegistAdminUser</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RegistAdminUser</servlet-name>
+		<url-pattern>/RegistAdminUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogoutChk</servlet-name>
+		<servlet-class>servlet.LogoutChk</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LogoutChk</servlet-name>
+		<url-pattern>/LogoutChk</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetSectionEmployee</servlet-name>
+		<servlet-class>servlet.GetSectionEmployee</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetSectionEmployee</servlet-name>
+		<url-pattern>/GetSectionEmployee</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegistEmployee</servlet-name>
+		<servlet-class>servlet.RegistEmployee</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RegistEmployee</servlet-name>
+		<url-pattern>/RegistEmployee</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DisplayEmployeeList</servlet-name>
+		<servlet-class>servlet.DisplayEmployeeList</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DisplayEmployeeList</servlet-name>
+		<url-pattern>/DisplayEmployeeList</url-pattern>
+	</servlet-mapping>
+
+</web-app>
