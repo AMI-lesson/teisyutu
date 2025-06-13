@@ -158,3 +158,28 @@ h1,
     text-decoration: none;
     color: #1ca9e3;
 }
+
+/*------------------------------
+    works_bn11の写真のレイアウト
+------------------------------*/
+.banner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.banner-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    /* デザイン確認用。不要なら削除OK */
+}
+
+@media (max-width: 600px) {
+    .banner-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -152,7 +152,6 @@ h1,
 .profile-body p {
     font-size: 31px;
     line-height: 1.8;
-    margin-bottom: 30px;
 }
 
 .profile-body p:last-child {
@@ -237,6 +236,49 @@ h1,
     margin-left: 5px;
 }
 
+
+.slide-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+
+
+/* ↓ 左右のボタン */
+.next {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 6px;
+    bottom: -11%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #000;
+    border-right: solid 3px #000;
+    -webkit-transform: rotate(45deg) translateY(50%);
+    transform: rotate(45deg) translateY(50%);
+}
+
+.prev {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 17px;
+    bottom: -11%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #000;
+    border-right: solid 3px #000;
+    -webkit-transform: rotate(-135deg) translateY(-50%);
+    transform: rotate(-135deg) translateY(-50%);
+}
+
 /*------------------------------
     contact
 ------------------------------*/
@@ -253,6 +295,7 @@ h1,
     /* 中央揃え */
     gap: 20px;
     /* アイコン間の余白 */
+    align-items: center;
 }
 
 .contact-list a {
@@ -445,6 +488,28 @@ h1,
         margin-bottom: 8px;
     }
 
+    /*------------------------------
+    ABOUT
+    ------------------------------*/
+    .profile {
+        display: block;
+        /* 縦並びに変更 */
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 50%;
+        margin: 0 auto 20px;
+    }
+
+    .profile-body p {
+        font-size: 2.5rem;
+    }
+
+    .profile-body__list {
+        text-align: left;
+        display: inline-block;
+    }
 
     /*------------------------------
     WORKS
@@ -459,8 +524,6 @@ h1,
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
-
-
 
     /*------------------------------
     SKILL

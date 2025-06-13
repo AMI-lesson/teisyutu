@@ -15,6 +15,16 @@ $(function () {
     }
   });
 
+  // リンクをクリックしたときメニューを閉じる
+  $(".gnav__item a").on("click", function () {
+    $("#hamburger").removeClass("open");
+    $("#gnav").hide();
+    $(".header .container").removeClass("container-open");
+  });
+
+  const label = $("#hamburger").find(".hamburger-label");
+  label.text("Menu");
+
   // works表示制限
   let visibleCount; // 最初に表示する個数
 
@@ -57,4 +67,44 @@ $(function () {
   document.getElementById("scrollToTopBtn").onclick = function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  // worksスライドショー
+  document.addEventListener("DOMContentLoaded", () => {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slide-item");
+    const totalSlides = slides.length;
+
+    document.getElementById("next").addEventListener("click", () => {
+      moveToNextSlide();
+    });
+
+    document.getElementById("prev").addEventListener("click", () => {
+      moveToPrevSlide();
+    });
+
+    function moveToNextSlide() {
+      if (currentIndex < totalSlides - 1) {
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+      updateSlidePosition();
+    }
+
+    function moveToPrevSlide() {
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = totalSlides - 1;
+      }
+      updateSlidePosition();
+    }
+
+    function updateSlidePosition() {
+      const newTranslateValue = -currentIndex * 100;
+      slides.forEach((slide) => {
+        slide.style.transform = `translateX(${newTranslateValue}%)`;
+      });
+    }
+  });
 });
